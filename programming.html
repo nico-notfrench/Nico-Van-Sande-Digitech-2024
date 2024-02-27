@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Programming</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <!-- The relates to the Google Font used in h1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Loading screen styles */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fe938c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-icon {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 52px solid #fbe5be;
+      animation: spin 2s linear infinite;
+      position: absolute;
+      top: center;
+      left: center;
+      transform: translate(center, center);
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      background-color: rgb(160, 179, 187);
+      margin: 0;
+      /* Reset margin */
+    }
+
+    .welcome-heading {
+      font-family: 'Poppins', sans-serif;
+      /* Change the font family here */
+      color: rgb(66, 129, 164);
+      margin-top: 0;
+      /* Adjust margin-top */
+    }
+
+    p {
+      color: #5e5e5e;
+    }
+
+    /* Sticky navigation bar */
+    nav {
+      position: -webkit-sticky;
+      /* Safari */
+      position: sticky;
+      top: 0;
+      background-color: #5e5e5e;
+      /* Update background color as needed */
+      z-index: 1000;
+      /* Ensure it stays above other content */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #5e5e5e;
+      /* Update background color as needed */
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: rgb(251, 229, 190);
+      color: white;
+    }
+
+    nav ul li a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-icon"></div>
+  </div>
+
+  <div class="header">
+    <img src="images/Final With Text - Smaller.png">
+  </div>
+  <div class="wrapper">
+    <!-- The Nav Bar goes here -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2023.html">2023</a></li>
+        <li><a href="imagecreation.html">Image Creation</a></li>
+        <li><a href="computerscience.html">Computer Science</a></li>
+        <li id='active'><a href="programming.html">Programming</a></li>
+        <li><a href="3dmodelling.html">3D Modelling</a></li>
+        <li><a href="animation.html">Animation</a></li>
+        <li><a href="videoaudio.html">Video</a></li>
+        <li><a href="designformanufacturing.html">D4M</a></li>
+        <li><a href="videogame.html">Video Game</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- page heading- add name here! -->
+      <h1>Programming</h1>
+      <!-- This is the container for all the images you want to add- it's a flexbox so add as many as you want -->
+      <div class='container'>
+        <!-- item 1 starts here-->
+        <div class='item'>
+          <img src="images/placeholder.png" alt="please replace me">
+          <div class='item-info'>
+            <!-- a brief explanation of what this picture is -->
+            <h5>What is this?</h5>
+          </div>
+        </div>
+        <!-- end of item 1 -->
+        <!-- item 2 starts here-->
+        <div class='item'>
+          <img src="images/placeholder.png" alt="please replace me">
+          <div class='item-info'>
+            <!-- a brief explanation of what this picture is -->
+            <h5>What is this?</h5>
+          </div>
+        </div>
+        <!-- end of item 2 -->
+        <!-- item 3 starts here-->
+        <div class='item'>
+          <img src="images/placeholder.png" alt="please replace me">
+          <div class='item-info'>
+            <!-- a brief explanation of what this picture is -->
+            <h5>What is this?</h5>
+          </div>
+        </div>
+        <!-- end of item 3 -->
+        <!-- now the Evaluation text box-->
+        <div class=information>
+          <h2>Evaluation</h2>
+          <p>
+            This is where you put your evaluation. You should delete this and write about your learning. What software
+            did you use? What skills did you learn? Was it enjoyable? Did you learn a lot? How could you extend this?
+            <br><br>
+            Maybe you could come up with a way you could use these skills for your term 4 project.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <marquee>&#169; Copyright Nico 2024</marquee>
+      </p>
+    </footer>
+  </div>
+  <!-- JavaScript to remove loading screen after page load -->
+  <script>
+    window.addEventListener('load', function () {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

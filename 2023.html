@@ -132,6 +132,30 @@
     .colored-background p {
       margin: 0; /* Reset paragraph margin */
     }
+
+    /* Parallax background style */
+    .parallax-bg {
+      background-image: url('images/Parallax.png'); /* Replace 'your-parallax-image.jpg' with the path to your parallax image */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* New style for colored background */
+    .colored-background {
+      background-color: #fbe5be; /* Choose your desired background color */
+      padding: 20px; /* Add padding */
+      margin-left: 0vw; /* Extend to the left edge of the screen */
+      margin-right: 0vw; /* Extend to the right edge of the screen */
+    }
+
+    /* New style for paragraph within colored background */
+    .colored-background p {
+      margin: 0; /* Reset paragraph margin */
+    }
   </style>
 </head>
 
@@ -166,7 +190,7 @@
       <h1 class="welcome-heading"><br>2023 Project</h1>
       <h2>The Unfortunate Pirate</h2>
       <!-- now the Information text box-->
-      <div class="colored-background">
+      <div class=information>
         <p>
           Over the course of last year we completed one topic per term for 4 terms,<br>
           Image Manipuation, Computer Science, Programming with Scratch and Character<br>
@@ -179,10 +203,12 @@
           learn a lot and I was able to apply my knowledge in the final task,character<br>
           design which I am going to showcase here.
         </p>
+      <div>
+      <div class="parallax-bg">
       </div>
       <div class=information>
         <p>
-          <br><br><br>For my very last project of the year, because of my love of Lego I chose<br>
+          <br>For my very last project of the year, because of my love of Lego I chose<br>
           to create a Lego Pirate in a multitude of outcomes. It all started with<br>
           an idea, an unlucky pirate. Perhaps with no legs or hands, but why not take<br>
           it further and get rid of both its eyes as well. Once the idea was set it<br>

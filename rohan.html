@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nico Digi | 2023</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <!-- The relates to the Google Font used in h1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" 
+    rel="stylesheet">
+  <link rel="icon" href="images/Triangle pattern.ico" type="image/x-icon">
+
+  <style>
+    /* Loading screen styles */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fe938c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-icon {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 52px solid #fbe5be;
+      animation: spin 2s linear infinite;
+      position: absolute;
+      top: center;
+      left: center;
+      transform: translate(center, center);
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      background-color: rgb(160, 179, 187);
+      margin: 0;
+      /* Reset margin */
+    }
+
+    .welcome-heading {
+      font-family: 'Poppins', sans-serif;
+      /* Change the font family here */
+      color: rgb(66, 129, 164);
+      margin-top: 0;
+      /* Adjust margin-top */
+    }
+
+    p {
+      color: #5e5e5e;
+      font-family: 'Albert Sans', sans-serif; /* Change font family to Albert Sans */
+      font-size: 25px; /* Adjust the font size as needed */
+    }
+
+    /* Sticky navigation bar */
+    nav {
+      position: -webkit-sticky;
+      /* Safari */
+      position: sticky;
+      top: 0;
+      background-color: #5e5e5e;
+      /* Update background color as needed */
+      z-index: 1000;
+      /* Ensure it stays above other content */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #5e5e5e;
+      /* Update background color as needed */
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: rgb(251, 229, 190);
+      color: white;
+    }
+
+    nav ul li a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* New style for colored background */
+    .colored-background {
+      background-color: #fbe5be; /* Choose your desired background color */
+      padding: 20px; /* Add padding */
+      margin-left: 0vw; /* Extend to the left edge of the screen */
+      margin-right: 0vw; /* Extend to the right edge of the screen */
+    }
+
+    /* New style for paragraph within colored background */
+    .colored-background p {
+      margin: 0; /* Reset paragraph margin */
+    }
+
+    /* Parallax background style */
+    .parallax-bg {
+      background-image: url('images/Parallax.png'); /* Replace 'your-parallax-image.jpg' with the path to your parallax image */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* New style for colored background */
+    .colored-background {
+      background-color: #fbe5be; /* Choose your desired background color */
+      padding: 20px; /* Add padding */
+      margin-left: 0vw; /* Extend to the left edge of the screen */
+      margin-right: 0vw; /* Extend to the right edge of the screen */
+    }
+
+    /* New style for paragraph within colored background */
+    .colored-background p {
+      margin: 0; /* Reset paragraph margin */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen">
+    <div class="loading-icon"></div>
+  </div>
+
+  <div class="header">
+    <img src="images/Final With Text - Smaller.png" alt="Header Image">
+  </div>
+  <div class="wrapper">
+    <!-- The Nav Bar goes here -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Leave?</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- page heading- add name here! -->
+      <h1 class="welcome-heading"><br>Rohan</h1>
+      <!-- now the Information text box-->
+      <div class=information>
+        <p>
+          Over the course of 2023 and 2024, I have made many friends after coming from<br>
+          a school where I knew no-one. One of these people was Rohan. Thank you Rohan<br>
+          for being there for me.
+        </p>
+      <div>
+      <div class="parallax-bg">
+      </div>
+      <!-- This is the container for all the images you want to add- it's a flexbox so add as many as you want -->
+      <div class='container'>
+        <!-- item 1 starts here-->
+        <div class='item'>
+          <img src="images/Pirate Studio Render - Side On - With Face.png"
+            alt="Lego Pirate with no hands, legs and one eye, angled sideways">
+        </div>
+        <!-- end of item 1 -->
+        <!-- item 2 starts here-->
+        <div class='item'>
+          <img src="images/Pirate Studio Render - Front On.png"
+            alt="Lego Pirate with no hands, legs and one eye facing towards the screen">
+        </div>
+        <!-- end of item 2 -->
+        <!-- item 3 starts here-->
+        <div class='item'>
+          <img src="images/Vector Pirate.png"
+            alt="Vector drawing of Lego Pirate with no hands, legs and one eye, angled sideways">
+        </div>
+        <!-- end of item 3 -->
+        <!-- item 4 starts here-->
+        <div class="sketchfab-embed-wrapper">
+          <iframe title="Lego Pirate Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="245" height="245" src="https://sketchfab.com/models/5afc924fdee043868710767f6188631f/embed?ui_theme=dark"> </iframe>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <marquee>&#169; Copyright Nico 2024</marquee>
+      </p>
+    </footer>
+  </div>
+  <!-- JavaScript to remove loading screen after page load -->
+  <script>
+    window.addEventListener('load', function () {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

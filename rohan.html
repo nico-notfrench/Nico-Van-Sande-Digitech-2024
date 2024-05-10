@@ -18,7 +18,22 @@
       background="images/Rohan.png";
       margin: 0;
       /* Reset margin */
-    }
+        overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+      }
+
+      /* Style scrollbar to make it invisible */
+      body::-webkit-scrollbar {
+        width: 0; /* Set the width of the scrollbar to zero */
+      }
+
+      /* Optional: Style the scrollbar track and thumb (adjust as needed) */
+      body::-webkit-scrollbar-track {
+        background: transparent; /* Make scrollbar track transparent */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: transparent; /* Make scrollbar thumb transparent */
+      }
 
     .welcome-heading {
       font-family: 'Poppins', sans-serif;
@@ -157,7 +172,7 @@
         <!-- end of item 3 -->
         <!-- item 4 starts here-->
         <div class="sketchfab-embed-wrapper">
-          <iframe title="Lego Pirate Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="245" height="245" src="https://sketchfab.com/models/5afc924fdee043868710767f6188631f/embed?ui_theme=dark"> </iframe>
+          <iframe title="Bob" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="245" height="245" src="https://sketchfab.com/models/2afe202c74bc42748c9e3921c2841075/embed?ui_theme=dark"> </iframe>
         </div>
       </div>
     </main>

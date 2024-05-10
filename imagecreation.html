@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" 
   rel="stylesheet">
   <link rel="icon" href="images/Triangle pattern.ico" type="image/x-icon">
-  
+
   <style>
     /* Loading screen styles */
     .loading-screen {
@@ -55,7 +55,22 @@
       background-color: rgb(160, 179, 187);
       margin: 0;
       /* Reset margin */
-    }
+        overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+      }
+
+      /* Style scrollbar to make it invisible */
+      body::-webkit-scrollbar {
+        width: 0; /* Set the width of the scrollbar to zero */
+      }
+
+      /* Optional: Style the scrollbar track and thumb (adjust as needed) */
+      body::-webkit-scrollbar-track {
+        background: transparent; /* Make scrollbar track transparent */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: transparent; /* Make scrollbar thumb transparent */
+      }
 
     .welcome-heading {
       font-family: 'Poppins', sans-serif;
@@ -119,6 +134,12 @@
     nav ul li a.active {
       background-color: #04AA6D;
       color: white;
+    }
+
+    .information {
+      background-color: #fbe5be;
+      padding: 20px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -214,6 +235,18 @@
     window.addEventListener('load', function () {
       var loadingScreen = document.querySelector('.loading-screen');
       loadingScreen.style.display = 'none';
+    });
+
+    // JavaScript to redirect when header image is clicked 3 times
+    var headerImage = document.getElementById('headerImage');
+    var clickCount = 0;
+
+    headerImage.addEventListener('click', function () {
+      clickCount++;
+
+      if (clickCount === 3) {
+        window.location.href = 'rohan.html';
+      }
     });
   </script>
 </body>

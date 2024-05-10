@@ -54,7 +54,22 @@
       body {
         background-color: rgb(160, 179, 187);
         margin: 0;
-        /* Reset margin */
+      /* Reset margin */
+        overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+      }
+
+      /* Style scrollbar to make it invisible */
+      body::-webkit-scrollbar {
+        width: 0; /* Set the width of the scrollbar to zero */
+      }
+
+      /* Optional: Style the scrollbar track and thumb (adjust as needed) */
+      body::-webkit-scrollbar-track {
+        background: transparent; /* Make scrollbar track transparent */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: transparent; /* Make scrollbar thumb transparent */
       }
 
       .welcome-heading {
@@ -201,6 +216,18 @@
     window.addEventListener('load', function () {
       var loadingScreen = document.querySelector('.loading-screen');
       loadingScreen.style.display = 'none';
+    });
+
+    // JavaScript to redirect when header image is clicked 3 times
+    var headerImage = document.getElementById('headerImage');
+    var clickCount = 0;
+
+    headerImage.addEventListener('click', function () {
+      clickCount++;
+
+      if (clickCount === 3) {
+        window.location.href = 'rohan.html';
+      }
     });
   </script>
 </body>

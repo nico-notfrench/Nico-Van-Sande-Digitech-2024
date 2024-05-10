@@ -28,25 +28,20 @@
     }
 
     .loading-icon {
-      width: 0;
-      height: 0;
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
-      border-bottom: 52px solid #fbe5be;
-      animation: spin 2s linear infinite;
-      position: absolute;
-      top: center;
-      left: center;
-      transform: translate(center, center);
+      font-family: 'Albert Sans', sans-serif;
+      font-size: 34px;
+      color: #fbe5be; /* Change the color as needed */
+      white-space: nowrap;
+      overflow: hidden;
+      animation: binaryRoll 5s linear infinite;
     }
 
-    @keyframes spin {
+    @keyframes binaryRoll {
       0% {
-        transform: rotate(0deg);
+        transform: translateY(-100%);
       }
-
       100% {
-        transform: rotate(360deg);
+        transform: translateY(100%);
       }
     }
 
@@ -54,6 +49,21 @@
       background-color: rgb(160, 179, 187);
       margin: 0;
       /* Reset margin */
+      overflow-y: scroll; /* Ensure vertical scrolling is enabled */
+    }
+
+    /* Style scrollbar to make it invisible */
+    body::-webkit-scrollbar {
+      width: 0; /* Set the width of the scrollbar to zero */
+    }
+
+    /* Optional: Style the scrollbar track and thumb (adjust as needed) */
+    body::-webkit-scrollbar-track {
+      background: transparent; /* Make scrollbar track transparent */
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: transparent; /* Make scrollbar thumb transparent */
     }
 
     .welcome-heading {
@@ -68,6 +78,12 @@
       color: #5e5e5e;
       font-family: 'Albert Sans', sans-serif; /* Change font family to Albert Sans */
       font-size: 25px; /* Adjust the font size as needed */
+    }
+
+    h5 {
+      color: #5e5e5e;
+      font-family: 'Albert Sans', sans-serif; /* Change font family to Albert Sans */
+      font-size: 32px; /* Adjust the font size as needed */
     }
 
     /* Sticky navigation bar */
@@ -113,13 +129,19 @@
       background-color: #04AA6D;
       color: white;
     }
+
+    .information {
+      background-color: #fbe5be;
+      padding: 20px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
   <!-- Loading screen -->
   <div class="loading-screen">
-    <div class="loading-icon"></div>
+    <div class="loading-icon">01000011 01001111 01001101 01010000 01010101 01010100 01000101 01010010<br><br> 00100000 01010011 01000011 01001001 01000101 01001110 01000011 01000101</div>
   </div>
 
   <div class="header">
@@ -146,45 +168,64 @@
       <!-- page heading- add name here! -->
       <h1>Computer Science</h1>
       <!-- This is the container for all the images you want to add- it's a flexbox so add as many as you want -->
-      <div class='container'>
-        <!-- item 1 starts here-->
-        <div class='item'>
-          <img src="images/placeholder.png" alt="please replace me">
-          <div class='item-info'>
-            <!-- a brief explanation of what this picture is -->
-            <h5>What is this?</h5>
-          </div>
-        </div>
-        <!-- end of item 1 -->
-        <!-- item 2 starts here-->
-        <div class='item'>
-          <img src="images/placeholder.png" alt="please replace me">
-          <div class='item-info'>
-            <!-- a brief explanation of what this picture is -->
-            <h5>What is this?</h5>
-          </div>
-        </div>
-        <!-- end of item 2 -->
-        <!-- item 3 starts here-->
-        <div class='item'>
-          <img src="images/placeholder.png" alt="please replace me">
-          <div class='item-info'>
-            <!-- a brief explanation of what this picture is -->
-            <h5>What is this?</h5>
-          </div>
-        </div>
-        <!-- end of item 3 -->
-        <!-- now the Evaluation text box-->
-        <div class=information>
-          <h2>Evaluation</h2>
-          <p>
-            This is where you put your evaluation. You should delete this and write about your learning. What software
-            did you use? What skills did you learn? Was it enjoyable? Did you learn a lot? How could you extend this?
-            <br><br>
-            Maybe you could come up with a way you could use these skills for your term 4 project.
-          </p>
-        </div>
-      </div>
+      <div class=information1>
+        <p>
+          I don't have a lot to show for this topic in photos, only writen documents.<br>
+          But I learnt quite a lot about Hexadecimal, Binary, and ASCII as wel as Error<br>
+          Detection and Searching and Sorting. I used a lot of diferent software to learn<br>
+          how to do these skills. It was really interesting to learn and find out how these all work.
+        <br><br>
+          49 20 64 6F 6E 27 74 20 68 61 76 65 20 61 20 6C 6F 74 20 74 6F 20 73 68 6F 77 20<br>
+          66 6F 72 20 74 68 69 73 20 74 6F 70 69 63 20 69 6E 20 70 68 6F 74 6F 73 2C 20 6F<br>
+          6E 6C 79 20 77 72 69 74 65 6E 20 64 6F 63 75 6D 65 6E 74 73 2E 0A 42 75 74 20 49<br>
+          20 6C 65 61 72 6E 74 20 71 75 69 74 65 20 61 20 6C 6F 74 20 61 62 6F 75 74 20 48<br>
+          65 78 61 64 65 63 69 6D 61 6C 2C 20 42 69 6E 61 72 79 2C 20 61 6E 64 20 41 53 43<br>
+          49 49 20 61 73 20 77 65 6C 20 61 73 20 45 72 72 6F 72 0A 44 65 74 65 63 74 69 6F<br>
+          6E 20 61 6E 64 20 53 65 61 72 63 68 69 6E 67 20 61 6E 64 20 53 6F 72 74 69 6E 67<br>
+          2E 20 49 20 75 73 65 64 20 61 20 6C 6F 74 20 6F 66 20 64 69 66 65 72 65 6E 74 20<br>
+          73 6F 66 74 77 61 72 65 20 74 6F 20 6C 65 61 72 6E 0A 68 6F 77 20 74 6F 20 64 6F<br>
+          20 74 68 65 73 65 20 73 6B 69 6C 6C 73 2E 20 49 74 20 77 61 73 20 72 65 61 6C 6C<br>
+          79 20 69 6E 74 65 72 65 73 74 69 6E 67 20 74 6F 20 6C 65 61 72 6E 20 61 6E 64 20<br>
+          66 69 6E 64 20 6F 75 74 20 68 6F 77 20 74 68 65 73 65 20 61 6C 6C 20 77 6F 72 6B 2E
+          
+          <br><br>
+          01001001 00100000 01100100 01101111 01101110 00100111 01110100 00100000<br>
+          01101000 01100001 01110110 01100101 00100000 01100001 00100000 01101100 01101111<br>
+          01110100 00100000 01110100 01101111 00100000 01110011 01101000 01101111 01110111<br>
+          00100000 01100110 01101111 01110010 00100000 01110100 01101000 01101001 01110011<br>
+          00100000 01110100 01101111 01110000 01101001 01100011 00100000 01101001 01101110<br>
+          00100000 01110000 01101000 01101111 01110100 01101111 01110011 00101100 00100000<br>
+          01101111 01101110 01101100 01111001 00100000 01110111 01110010 01101001 01110100<br>
+          01100101 01101110 00100000 01100100 01101111 01100011 01110101 01101101 01100101<br>
+          01101110 01110100 01110011 00101110 00001010 01000010 01110101 01110100 00100000<br>
+          01001001 00100000 01101100 01100101 01100001 01110010 01101110 01110100 00100000<br>
+          01110001 01110101 01101001 01110100 01100101 00100000 01100001 00100000 01101100<br>
+          01101111 01110100 00100000 01100001 01100010 01101111 01110101 01110100 00100000<br>
+          01001000 01100101 01111000 01100001 01100100 01100101 01100011 01101001 01101101<br>
+          01100001 01101100 00101100 00100000 01000010 01101001 01101110 01100001 01110010<br>
+          01111001 00101100 00100000 01100001 01101110 01100100 00100000 01000001 01010011<br>
+          01000011 01001001 01001001 00100000 01100001 01110011 00100000 01110111 01100101<br>
+          01101100 00100000 01100001 01110011 00100000 01000101 01110010 01110010 01101111<br>
+          01110010 00001010 01000100 01100101 01110100 01100101 01100011 01110100 01101001<br>
+          01101111 01101110 00100000 01100001 01101110 01100100 00100000 01010011 01100101<br>
+          01100001 01110010 01100011 01101000 01101001 01101110 01100111 00100000 01100001<br>
+          01101110 01100100 00100000 01010011 01101111 01110010 01110100 01101001 01101110<br> 
+          01100111 00101110 00100000 01001001 00100000 01110101 01110011 01100101 01100100<br>
+          00100000 01100001 00100000 01101100 01101111 01110100 00100000 01101111 01100110<br>
+          00100000 01100100 01101001 01100110 01100101 01110010 01100101 01101110 01110100<br>
+          00100000 01110011 01101111 01100110 01110100 01110111 01100001 01110010 01100101<br>
+          00100000 01110100 01101111 00100000 01101100 01100101 01100001 01110010 01101110<br>
+          00001010 01101000 01101111 01110111 00100000 01110100 01101111 00100000 01100100<br>
+          01101111 00100000 01110100 01101000 01100101 01110011 01100101 00100000 01110011<br>
+          01101011 01101001 01101100 01101100 01110011 00101110 00100000 01001001 01110100<br>
+          00100000 01110111 01100001 01110011 00100000 01110010 01100101 01100001 01101100<br>
+          01101100 01111001 00100000 01101001 01101110 01110100 01100101 01110010 01100101<br>
+          01110011 01110100 01101001 01101110 01100111 00100000 01110100 01101111 00100000<br>
+          01101100 01100101 01100001 01110010 01101110 00100000 01100001 01101110 01100100<br>
+          00100000 01100110 01101001 01101110 01100100 00100000 01101111 01110101 01110100<br>
+          00100000 01101000 01101111 01110111 00100000 01110100 01101000 01100101 01110011<br>
+          01100101 00100000 01100001 01101100 01101100 00100000 01110111 01101111 01110010<br>
+          01101011 00101110 00001010</p>
     </main>
     <footer>
       <p>
@@ -197,6 +238,18 @@
     window.addEventListener('load', function () {
       var loadingScreen = document.querySelector('.loading-screen');
       loadingScreen.style.display = 'none';
+    });
+
+    // JavaScript to redirect when header image is clicked 3 times
+    var headerImage = document.getElementById('headerImage');
+    var clickCount = 0;
+
+    headerImage.addEventListener('click', function () {
+      clickCount++;
+
+      if (clickCount === 3) {
+        window.location.href = 'rohan.html';
+      }
     });
   </script>
 </body>
